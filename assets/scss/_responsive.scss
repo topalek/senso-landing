@@ -143,8 +143,8 @@
     margin-bottom: 2rem;
   }
   .block {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   .blockquote {
     p {
@@ -166,11 +166,18 @@
   #hero {
     height: auto !important;
 
+    .hero__slider {
+      .slide {
+        background-size: contain;
+      }
+    }
+
     .hero__background {
-      height: 50rem;
+      height: 20rem;
       border-bottom: none;
       position: relative;
       z-index: 1;
+      margin-top: 10rem;
 
       .owl-stage-outer {
         height: 100% !important;

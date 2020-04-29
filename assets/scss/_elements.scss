@@ -92,6 +92,9 @@ h1 {
   margin-bottom: 3rem;
   margin-top: 1rem;
   font-weight: 600;
+  @media (max-width: 768px) {
+    font-size: 4rem;
+  }
 }
 
 h2 {
@@ -104,6 +107,9 @@ h2 {
 h3 {
   font-size: 4.2rem;
   margin-bottom: 2rem;
+  @media (max-width: 768px) {
+    font-size: 3rem;
+  }
 }
 
 h4 {

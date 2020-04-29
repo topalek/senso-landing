@@ -61,6 +61,11 @@ Headers:		'Poppins', sans-serif;
 .block .block__title {
   margin-bottom: 10rem;
 }
+@media (max-width: 768px) {
+  .block .block__title {
+    margin-bottom: 2rem;
+  }
+}
 .block .block__title h2 {
   margin-bottom: 2rem;
 }
@@ -72,6 +77,13 @@ Headers:		'Poppins', sans-serif;
   position: relative;
   padding-top: 5rem;
   padding-bottom: 5rem;
+}
+
+@media (max-width: 767px) {
+  .block .block__wrapper {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 .block .block__wrapper > h3 {
   margin-bottom: 6rem;
@@ -291,6 +303,13 @@ Headers:		'Poppins', sans-serif;
   bottom: 0;
   transition: 0.3s ease;
 }
+
+@media (max-width: 768px) {
+  .box.box--image.box--image--full-image h4 {
+    font-size: 3rem;
+    text-align: center;
+  }
+}
 .box.box--image.box--image--full-image h5 {
   bottom: 3rem;
   opacity: 0;
@@ -333,6 +352,12 @@ Headers:		'Poppins', sans-serif;
   padding: 3rem;
   position: absolute;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .box.box--image .box__content {
+    padding: 1.5rem;
+  }
 }
 .box.box--image h4 {
   font-weight: 600;
@@ -411,6 +436,12 @@ Headers:		'Poppins', sans-serif;
   padding: 5rem 3rem;
   color: #fff;
   position: relative;
+}
+
+@media (max-width: 768px) {
+  #hero .hero__caption {
+    padding: 3rem 1.5rem;
+  }
 }
 #hero .hero__outer-wrapper {
   display: table;
@@ -817,6 +848,12 @@ Headers:		'Poppins', sans-serif;
 .person .person__description {
   margin-left: 20rem;
 }
+
+@media (max-width: 768px) {
+  .person .person__description {
+    margin-left: 0;
+  }
+}
 .person label {
   font-weight: 700;
   font-size: 1.4rem;
@@ -957,6 +994,12 @@ h1 {
   font-weight: 600;
 }
 
+@media (max-width: 768px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+
 h2 {
   font-size: 5.6rem;
   margin-bottom: 4rem;
@@ -967,6 +1010,12 @@ h2 {
 h3 {
   font-size: 4.2rem;
   margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  h3 {
+    font-size: 3rem;
+  }
 }
 
 h4 {
@@ -1801,8 +1850,8 @@ textarea.form-control {
   }
 
   .block {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .blockquote p {
@@ -1822,12 +1871,19 @@ textarea.form-control {
   #hero {
     height: auto !important;
   }
+
+  #hero .hero__slider .slide {
+    background-size: contain;
+  }
+
   #hero .hero__background {
-    height: 50rem;
+    height: 20rem;
     border-bottom: none;
     position: relative;
     z-index: 1;
+    margin-top: 10rem;
   }
+
   #hero .hero__background .owl-stage-outer {
     height: 100% !important;
   }
