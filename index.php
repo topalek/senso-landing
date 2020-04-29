@@ -49,21 +49,16 @@ if (count($_POST) > 0) {
 </head>
 <body data-spy="scroll" data-target=".navbar">
 <?php if ( ! empty($result)): ?>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="alert alert-<?= $result['success'] ? 'success' : 'danger' ?> alert-dismissible" role="alert"
-                     style="z-index: 9999;text-align: center;padding: 20px;font-size: 20px;">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+
+    <div class="modal fade" id="response" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body text-<?= $result['success'] ? 'success' : 'danger' ?>">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <strong>
-                        <?= $result['message'] ?>
-                    </strong>
+                    <h4><?= $result['message'] ?></h4>
                 </div>
-                <script>
-                    $(".alert").alert();
-                </script>
             </div>
         </div>
     </div>
@@ -338,7 +333,7 @@ if (count($_POST) > 0) {
                                     </div>
                                     <div class="box__header">
                                         <h4>Подгузники детские senso baby B2 Mini (3-6 kg)</h4>
-                                        <h3 class="price">от 89 до 259 грн</h3>
+                                        <h3 class="price">от 84 до 243 грн</h3>
                                     </div>
                                     <div class="box__content">
                                         <ul class="list-unstyled">
@@ -369,7 +364,7 @@ if (count($_POST) > 0) {
                                     </div>
                                     <div class="box__header">
                                         <h4>Подгузники детские senso baby B3 Midi (4-9 kg)</h4>
-                                        <h3 class="price">от 95 до 259 грн</h3>
+                                        <h3 class="price">от 84 до 243 грн</h3>
                                     </div>
                                     <div class="box__content">
                                         <ul class="list-unstyled">
@@ -400,7 +395,7 @@ if (count($_POST) > 0) {
                                     </div>
                                     <div class="box__header">
                                         <h4>Подгузники детские senso baby B4 Maxi (7-18 kg)</h4>
-                                        <h3 class="price">от 95 до 287 грн</h3>
+                                        <h3 class="price">от 84 до 265 грн</h3>
                                     </div>
                                     <div class="box__content">
                                         <ul class="list-unstyled">
@@ -434,7 +429,7 @@ if (count($_POST) > 0) {
                                     </div>
                                     <div class="box__header">
                                         <h4>Подгузники детские senso baby B5 Junior (11-25 kg)</h4>
-                                        <h3 class="price">от 95 до 286 грн</h3>
+                                        <h3 class="price">от 84 до 265 грн</h3>
                                     </div>
                                     <div class="box__content">
                                         <ul class="list-unstyled">
@@ -465,7 +460,7 @@ if (count($_POST) > 0) {
                                     </div>
                                     <div class="box__header">
                                         <h4>Подгузники детские EcoLine</h4>
-                                        <h3 class="price">от 139 до 157 грн</h3>
+                                        <h3 class="price">от 129 до 143 грн</h3>
                                     </div>
                                     <div class="box__content">
                                         <ul class="list-unstyled">

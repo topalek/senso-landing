@@ -885,10 +885,29 @@ Headers:		'Poppins', sans-serif;
   width: 0;
   position: absolute;
 }
+
 .prog-bar .bar {
   background-color: #009fff;
   height: 0.3rem;
   width: 100%;
+}
+
+/*
+* R
+*/
+#response .modal-body {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#response .modal-body .close {
+  font-size: 3rem;
+}
+
+#response h4 {
+  margin-bottom: 0;
 }
 
 /*----------------------------------------------------------------------------------------------------------------------

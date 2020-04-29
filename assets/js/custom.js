@@ -186,6 +186,8 @@ $(document).ready(function ($) {
 
     // form AJAX sending
 
+    $("#response").modal();
+
     $('.order').on('click', e => {
         let orderName = $(e.target).data('order');
         let hiddenInput = document.createElement('input');
