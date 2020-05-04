@@ -1,6 +1,13 @@
 <?php
 
 $result = [];
+$videos = [
+    '/assets/video/video-1.mp4',
+    '/assets/video/video-2.mp4',
+    '/assets/video/video-3.mp4',
+    '/assets/video/video-4.mp4'
+];
+shuffle($videos);
 if (count($_POST) > 0) {
     $order = $_POST['order'] ?? [];
 
@@ -9,7 +16,7 @@ if (count($_POST) > 0) {
         $text             = array_filter(["Подгузники SENSO", $title, $order['message'] ?? null]);
         $order['message'] = implode("\n", $text);
         $order['key']     = md5(date('Y-m-d') . 'ipopoOrder');
-        $url              = 'http://kids/api/save-from-senso-request';
+        $url              = 'https://ipopokids.ua/api/save-from-senso-request';
         $ch               = curl_init();
 
         //set the url, number of POST vars, POST data
@@ -34,6 +41,21 @@ if (count($_POST) > 0) {
 <!doctype html>
 <html lang="ru">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-P6PB3NC');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="ThemeStarz">
@@ -43,11 +65,18 @@ if (count($_POST) > 0) {
     <link rel="stylesheet" href="assets/fonts/font-awesome.css" type="text/css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Детские подгузники Senso в Украине</title>
 
 </head>
 <body data-spy="scroll" data-target=".navbar">
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6PB3NC"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
 <?php if ( ! empty($result)): ?>
 
     <div class="modal fade" id="response" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
@@ -79,6 +108,7 @@ if (count($_POST) > 0) {
                     <a class="nav-item nav-link" href="#features">Преимущества</a>
                     <a class="nav-item nav-link" href="#developing-process">Технологии</a>
                     <a class="nav-item nav-link" href="#pricing">Цены</a>
+                    <a class="nav-item nav-link" href="#reviews">Отзывы</a>
                     <a class="nav-item nav-link" href="#gallery">Сертификаты качества</a>
                     <a class="nav-item nav-link" href="#contact">Заказать подгузники</a>
                     <span class="divider"></span>
@@ -516,6 +546,30 @@ if (count($_POST) > 0) {
             </div>
         </section>
 
+        <section id="reviews" class="block">
+            <div class="container">
+                <div class="block__wrapper">
+                    <div class="block__title">
+                        <h2 class="text-center">Отзывы покупатедей подгузников senso baby</h2>
+                    </div>
+                    <div class="row">
+                        <div class="gallery">
+                            <?php for ($i = 0; $i <= 2; $i++): ?>
+                                <a data-fancybox="gallery" class="fancybox" href="<?= $videos[$i] ?>"></a>
+                            <?php endfor; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="background-wrapper" data-background-color="#f9f9f9"
+                 style="background-color: rgb(249, 249, 249);">
+                <div class="background--image opacity-10 background--repeat-repeat"
+                     style="background-image: url('assets/img/pattern-topo.png');">
+                    <img src="assets/img/pattern-topo.png" alt="">
+                </div>
+            </div>
+        </section>
+
         <section class="block" id="gallery">
             <div class="container">
                 <div class="block__wrapper">
@@ -711,9 +765,8 @@ if (count($_POST) > 0) {
     </div>
 </div>
 
-<!--<editor-fold desc="Description">-->
 <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script>
 <script type="text/javascript" src="assets/js/popper.min.js"></script>
 <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src=""></script>
@@ -731,6 +784,6 @@ if (count($_POST) > 0) {
     var mapTheme = "light";
     var mapElement = "map";
 </script>
-<!--</editor-fold>-->
+
 </body>
 </html>

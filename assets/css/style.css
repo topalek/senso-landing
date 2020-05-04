@@ -885,7 +885,6 @@ Headers:		'Poppins', sans-serif;
   width: 0;
   position: absolute;
 }
-
 .prog-bar .bar {
   background-color: #009fff;
   height: 0.3rem;
@@ -901,11 +900,9 @@ Headers:		'Poppins', sans-serif;
   justify-content: center;
   align-items: center;
 }
-
 #response .modal-body .close {
   font-size: 3rem;
 }
-
 #response h4 {
   margin-bottom: 0;
 }
@@ -927,11 +924,42 @@ Headers:		'Poppins', sans-serif;
   padding-top: 1rem;
 }
 
+#reviews h2 {
+  font-variant: small-caps;
+}
+
+#reviews .gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+#reviews .gallery a {
+  display: flex;
+  width: 350px;
+  height: 450px;
+  background-color: #ff6699;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+#reviews .gallery a::after {
+  display: block;
+  content: "";
+  width: 85px;
+  height: 124px;
+  border-left: 85px solid #fff;
+  border-top: 61px solid transparent;
+  border-bottom: 61px solid transparent;
+}
+
 /*2. Elements*/
 a {
   color: #000000;
   transition: 0.3s color ease, 0.3s background-color ease, 0.3s box-shadow ease;
 }
+
 a:hover, a:focus, a:active {
   outline: none !important;
   text-decoration: none;

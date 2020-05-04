@@ -1095,3 +1095,35 @@
   padding-bottom: 1rem;
   padding-top: 1rem;
 }
+
+#reviews {
+  h2 {
+    font-variant: small-caps;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+
+    a {
+      display: flex;
+      width: 350px;
+      height: 450px;
+      background-color: #ff6699;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+
+      &::after {
+        display: block;
+        content: '';
+        width: 85px;
+        height: 124px;
+        border-left: 85px solid #fff;
+        border-top: 61px solid transparent;
+        border-bottom: 61px solid transparent;
+      }
+    }
+  }
+}
