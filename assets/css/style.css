@@ -191,8 +191,13 @@ Headers:		'Poppins', sans-serif;
 .box .box__content {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  /**/
   flex: 1 1 auto;
+}
+.box__etc {
+  padding: 0 0 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .box .box__footer {
   padding-top: 1rem;
@@ -227,7 +232,7 @@ Headers:		'Poppins', sans-serif;
 }
 .box.box--pricing .box__content {
   padding-top: 2rem;
-  padding-bottom: 4rem;
+  padding-bottom: 1rem;
 }
 .box.box--pricing .box__footer {
   padding-bottom: 3rem;
@@ -362,6 +367,15 @@ Headers:		'Poppins', sans-serif;
 }
 .box.box--image h5 {
   opacity: 0.5;
+}
+
+.delivery {
+  background-color: red;
+  border-radius: 15px;
+  color: #fff;
+  font-variant: small-caps;
+  font-size: 16px;
+  padding: 0 28px 0 28px;
 }
 
 /*----------------------------------------------------------------------------------------------------------------------
@@ -927,23 +941,29 @@ Headers:		'Poppins', sans-serif;
 #reviews h2 {
   font-variant: small-caps;
 }
-
 #reviews .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }
-
+@media (max-width: 767px) {
+  #reviews .gallery {
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+}
 #reviews .gallery a {
   display: flex;
   width: 350px;
   height: 450px;
   background-color: #ff6699;
   position: relative;
-  justify-content: center;
-  align-items: center;
 }
-
+@media (max-width: 767px) {
+  #reviews .gallery a {
+    height: 350px;
+  }
+}
 #reviews .gallery a::after {
   display: block;
   content: "";
@@ -952,6 +972,18 @@ Headers:		'Poppins', sans-serif;
   border-left: 85px solid #fff;
   border-top: 61px solid transparent;
   border-bottom: 61px solid transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+#reviews .gallery .thumb {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 /*2. Elements*/
@@ -959,7 +991,6 @@ a {
   color: #000000;
   transition: 0.3s color ease, 0.3s background-color ease, 0.3s box-shadow ease;
 }
-
 a:hover, a:focus, a:active {
   outline: none !important;
   text-decoration: none;

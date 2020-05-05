@@ -2,10 +2,22 @@
 
 $result = [];
 $videos = [
-    '/assets/video/video-1.mp4',
-    '/assets/video/video-2.mp4',
-    '/assets/video/video-3.mp4',
-    '/assets/video/video-4.mp4'
+    [
+        'video' => '/assets/video/video-1.mp4',
+        'thumb' => '/assets/video/thumb-1.jpg',
+    ],
+    [
+        'video' => '/assets/video/video-2.mp4',
+        'thumb' => '/assets/video/thumb-2.jpg',
+    ],
+    [
+        'video' => '/assets/video/video-3.mp4',
+        'thumb' => '/assets/video/thumb-3.jpg',
+    ],
+    [
+        'video' => '/assets/video/video-4.mp4',
+        'thumb' => '/assets/video/thumb-4.jpg'
+    ],
 ];
 shuffle($videos);
 if (count($_POST) > 0) {
@@ -375,6 +387,11 @@ if (count($_POST) > 0) {
                                                     грн/шт</sup></li>
                                         </ul>
                                     </div>
+                                    <div class="box__etc">
+                                        <div class="delivery">
+                                            Доставка 25 грн
+                                        </div>
+                                    </div>
                                     <div class="box__footer">
                                         <a href="#contact" class="btn btn-primary order"
                                            data-order="Подгузники детские senso baby B2 Mini (3-6 kg)">Заказать
@@ -406,6 +423,11 @@ if (count($_POST) > 0) {
                                                     грн/шт</sup></li>
                                         </ul>
                                     </div>
+                                    <div class="box__etc">
+                                        <div class="delivery">
+                                            Доставка 25 грн
+                                        </div>
+                                    </div>
                                     <div class="box__footer">
                                         <a href="#contact" class="btn btn-primary order"
                                            data-order="Подгузники детские senso baby B3 Midi (4-9 kg)">Заказать
@@ -436,6 +458,11 @@ if (count($_POST) > 0) {
                                             <li>66 шт. в упаковке - 265 грн<sup class="badge badge-success">4,02
                                                     грн/шт</sup></li>
                                         </ul>
+                                    </div>
+                                    <div class="box__etc">
+                                        <div class="delivery">
+                                            Доставка 25 грн
+                                        </div>
                                     </div>
                                     <div class="box__footer">
                                         <a href="#contact" class="btn btn-primary order"
@@ -470,6 +497,11 @@ if (count($_POST) > 0) {
                                             <li>56 шт. в упаковке - 265 грн<sup class="badge badge-success">5,73
                                                     грн/шт</sup></li>
                                         </ul>
+                                    </div>
+                                    <div class="box__etc">
+                                        <div class="delivery">
+                                            Доставка 25 грн
+                                        </div>
                                     </div>
                                     <div class="box__footer">
                                         <a href="#contact" class="btn btn-primary order"
@@ -506,6 +538,11 @@ if (count($_POST) > 0) {
                                                     грн/шт</sup></li>
                                         </ul>
                                     </div>
+                                    <div class="box__etc">
+                                        <div class="delivery">
+                                            Доставка 25 грн
+                                        </div>
+                                    </div>
                                     <div class="box__footer">
                                         <a href="#contact" class="btn btn-primary order"
                                            data-order="Подгузники детские EcoLine">Заказать подгузники</a>
@@ -532,6 +569,11 @@ if (count($_POST) > 0) {
                                                     грн/шт</sup></li>
                                         </ul>
                                     </div>
+                                    <div class="box__etc">
+                                        <div class="delivery">
+                                            Доставка 25 грн
+                                        </div>
+                                    </div>
                                     <div class="box__footer">
                                         <a href="#contact" class="btn btn-primary order"
                                            data-order="Подгузники детские senso baby B5 Jun Extra (15-30 kg)">Заказать
@@ -555,7 +597,9 @@ if (count($_POST) > 0) {
                     <div class="row">
                         <div class="gallery">
                             <?php for ($i = 0; $i <= 2; $i++): ?>
-                                <a data-fancybox="gallery" class="fancybox" href="<?= $videos[$i] ?>"></a>
+                                <a data-fancybox="gallery" class="fancybox" href="<?= $videos[$i]['video'] ?>">
+                                    <img class="thumb" src="<?= $videos[$i]['thumb'] ?>" alt="senso">
+                                </a>
                             <?php endfor; ?>
                         </div>
                     </div>
