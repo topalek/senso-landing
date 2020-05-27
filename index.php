@@ -142,7 +142,7 @@ if (count($_POST) > 0) {
                             <img src="assets/img/slide-02.jpg" alt="">
                         </div>
                         <div class="slide img-into-bg">
-                            <img src="assets/img/slide-03.jpg" alt="">
+                            <img src="assets/img/slide-04.jpg" alt="">
                         </div>
                     </div>
                 </div>
